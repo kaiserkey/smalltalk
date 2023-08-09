@@ -22,26 +22,47 @@ numero := 4
 "Bucles en smalltalk"
 nombres := #('Alice' 'Bob' 'Charlie' 'David').
 nombres do:[ :nombre | Transcript show: nombre; cr.].
-nombres first printString.
-nombres last printString.
-
 
 "Arreglos"
-"Encontrar el primer valor que coincide"
+nombres:= #('Alice' 1 'Charlie' 2).
+
+"Acceder al elemento en la posición 3"
+nombres at: 3. 
+
+"Obtiene el primer elemento del arreglo"
+nombres first printString.
+"Obtiene le ultimo elemento del arreglo"
+nombres last printString.
+
+"Encontrar el primer valor que coincide y lo devuelve"
 numeros:=#(1 2 3 4 5 6 7 8).
 buscar:= 3.
 numeros detect:[:elemento | elemento == buscar]. 
 
-"Encontrar todos los valores que coinciden y devolver un nuevo arreglo"
+"Encontra todos los valores que cumplen la condicion y luego devuelve un nuevo arreglo con los valores encontrado"
 numeros:=#(1 2 2 4 5 2 7 8).
 buscar:= 2.
-numeros select:[:elemento | elemento == buscar]. 
+numeros select:[:elemento | elemento > buscar]. 
 
-"Verificar si un valor especifico esta en un arreglo"
+"Verificar si un valor especifico esta en un arreglo, devuelve true si lo encuentra y false si no lo encuentra"
 numeros:=#(1 2 3 4 5 6 7 8).
 buscar:= 2.
 (numeros includes: buscar) ifTrue:['Se encontro el numero'] ifFalse:['No se encontro el numero']. 
 
-"Encontrar la posicion de un elemento en el arreglo, si no lo encuentra devuelve 0"
-nombres := #('Alice' 'Bob' 'Charlie' 'David').
-nombres indexOf: 'Bob'.
+"Encontrar la posicion de un elemento en el arreglo, si no lo encuentra devuelve 0. Regresa solo el primer elemento encontrado"
+nombres := #('Alice' 'Bob' 'Charlie' 'Bob' 'David').
+nombres indexOf: 'Bob'. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
