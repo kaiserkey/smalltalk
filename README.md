@@ -1,0 +1,2 @@
+# Repositorio de Codigo Smalltalk
+Smalltalk es un lenguaje reflexivo de programación, orientado a objetos y con tipado dinámico. Por sus características, Smalltalk puede ser considerado también como un entorno de objetos, donde incluso el propio sistema es un objeto.
